@@ -52,4 +52,30 @@
 //    Console.WriteLine(i);
 //}
 //___________________________________________________________________3
+//string Str = Console.ReadLine();
+//CountSwap(Str);
+//static void CountSwap(string Str)
+//{
+//    int a = 0,SwapCount=0,Temp;
+//    string SubStr = " ";
+//    SubStr= Str.Substring(1, Str.Length - 2);
+//    string[] sAry = SubStr.Split(",");
+//    int[] iAry = new int[sAry.Length];
+//    foreach (var item in sAry)
+//    {
+//        iAry[a] = int.Parse(item) ;
+//        a++;
+//    }
+//    for (int i = 0; i < iAry.Length; i++)
+//    {
+//        while (iAry[i]!=i+1)
+//        {
+//            Temp = iAry[i];
+//            iAry[i] = iAry[iAry[i] - 1];
+//            iAry[Temp - 1] = Temp;
+//            SwapCount++;
+//        }
+//    }
+//    Console.WriteLine(SwapCount);
+//}
 
