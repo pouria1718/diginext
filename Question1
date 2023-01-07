@@ -1,0 +1,36 @@
+
+//__________________________________________________________________1
+Console.WriteLine("Enter string:");
+string Str = (Console.ReadLine()).ToLower();
+
+Console.WriteLine("Enter number:");
+int Num = int.Parse(Console.ReadLine());
+folani(Str, Num);
+static void folani(string a, int b)
+{
+    int i = 0, f = 0;
+    while (i < b)
+    {
+        foreach (var item in a)
+        {
+            if (i + 1 > b)
+            {
+                break;
+            }
+            else
+            {
+                Console.Write(item);
+                if (item.ToString() == "a")
+                {
+                    f++;
+                }
+            }
+            i++;
+        }
+    }
+
+    Console.WriteLine("a:" + f);
+
+}
+
+
