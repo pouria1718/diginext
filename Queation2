@@ -1,0 +1,19 @@
+//___________________________________________________________________2
+string Str = (Console.ReadLine()).ToUpper();
+static void folanam(string a)
+{
+    int i = 0;
+    for (int c = 0; c < a.Length; c++)
+    {
+        try
+        {
+            if (a[c] == a[c + 1])
+                i++;
+        }
+        catch
+        {
+            break;
+        }
+    }
+    Console.WriteLine(i);
+}
