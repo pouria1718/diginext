@@ -1,5 +1,5 @@
 
-//__________________________________________________________________1
+//__________________________________________________________________1/C#
 Console.WriteLine("Enter string:");
 string Str = (Console.ReadLine()).ToLower();
 
@@ -20,17 +20,13 @@ static void folani(string a, int b)
             else
             {
                 Console.Write(item);
-                if (item.ToString() == "a")
-                {
-                    f++;
-                }
+                if (item.ToString() == "a")                
+                    f++;               
             }
             i++;
         }
     }
-
     Console.WriteLine("a:" + f);
-
 }
 
 
