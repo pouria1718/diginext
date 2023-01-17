@@ -1,6 +1,7 @@
 //___________________________________________________________________2/C#
 string Str = (Console.ReadLine()).ToUpper();
-static void folanam(string a)
+string StrRes = Function(Str);
+static string Function(string a)
 {
     int i = 0;
     for (int c = 0; c < a.Length; c++)
@@ -15,5 +16,7 @@ static void folanam(string a)
             break;
         }
     }
-    Console.WriteLine(i);
+    //Console.WriteLine(i);
+    return (i.ToString());
 }
+Console.WriteLine(StrRes);
