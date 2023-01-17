@@ -5,8 +5,8 @@ string Str = (Console.ReadLine()).ToLower();
 
 Console.WriteLine("Enter number:");
 int Num = int.Parse(Console.ReadLine());
-folani(Str, Num);
-static void folani(string a, int b)
+string StrRes=folani(Str, Num);
+static string folani(string a, int b)
 {
     int i = 0, f = 0;
     while (i < b)
@@ -19,14 +19,16 @@ static void folani(string a, int b)
             }
             else
             {
-                Console.Write(item);
-                if (item.ToString() == "a")                
-                    f++;               
+                //Console.Write(item);
+                if (item.ToString() == "a")
+                    f++;
             }
             i++;
         }
     }
-    Console.WriteLine("a:" + f);
+    //Console.WriteLine("/a:" + f);
+    return (f.ToString());
 }
+Console.WriteLine(StrRes);
 
 
