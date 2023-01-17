@@ -1,21 +1,22 @@
 //___________________________________________________________________3/C#
 string Str = Console.ReadLine();
-CountSwap(Str);
-static void CountSwap(string Str)
+string StrRes= CountSwap(Str);
+
+static string CountSwap(string Str)
 {
-    int a = 0,SwapCount=0,Temp;
+    int a = 0, SwapCount = 0, Temp;
     string SubStr = " ";
-    SubStr= Str.Substring(1, Str.Length - 2);
+    SubStr = Str.Substring(1, Str.Length - 2);
     string[] sAry = SubStr.Split(",");
     int[] iAry = new int[sAry.Length];
     foreach (var item in sAry)
     {
-        iAry[a] = int.Parse(item) ;
+        iAry[a] = int.Parse(item);
         a++;
     }
     for (int i = 0; i < iAry.Length; i++)
     {
-        while (iAry[i]!=i+1)
+        while (iAry[i] != i + 1)
         {
             Temp = iAry[i];
             iAry[i] = iAry[iAry[i] - 1];
@@ -23,5 +24,7 @@ static void CountSwap(string Str)
             SwapCount++;
         }
     }
-    Console.WriteLine(SwapCount);
+    return (SwapCount.ToString());
+    //Console.WriteLine(SwapCount);
 }
+Console.WriteLine(StrRes);
