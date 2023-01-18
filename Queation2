@@ -20,7 +20,6 @@ static string Function(string a)
         {
             if (a[c] == a[c + 1])
             {
-                i++;
                 StrAry[c + 1] = null;
                 Rem = false;
             }
