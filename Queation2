@@ -1,22 +1,49 @@
-//___________________________________________________________________2/C#
+
+//____________________________________________________________________2/C#
 string Str = (Console.ReadLine()).ToUpper();
 string StrRes = Function(Str);
 static string Function(string a)
 {
+    string[] StrAry = new string[a.Length];
     int i = 0;
+    int t = 0;
+    string StrRes = " ";
+    bool Rem = true;
+    foreach (var item in a)
+    {
+        StrAry[t] = item.ToString();
+        t++;
+    }
     for (int c = 0; c < a.Length; c++)
     {
         try
         {
             if (a[c] == a[c + 1])
+            {
                 i++;
+                StrAry[c + 1] = null;
+                Rem = false;
+            }
         }
         catch
         {
             break;
         }
+        t = 0;
+        if (Rem == false)
+        {
+            foreach (var item in StrAry)
+            {
+                if (item != null)
+                    StrRes += item;                    
+                t++;
+            }
+            if (t==5)
+                break;           
+        }
     }
+    int Res = a.Length - (StrRes.Length-1);
     //Console.WriteLine(i);
-    return (i.ToString());
+    return (Res.ToString());
 }
 Console.WriteLine(StrRes);
